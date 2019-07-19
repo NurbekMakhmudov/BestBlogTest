@@ -14,5 +14,11 @@ public class AcMain extends AppCompatActivity {
         startActivity(new Intent(this, AcBasic.class));
         finish();
 
+
+
+
+
+
+
     }
 }

@@ -117,6 +117,7 @@ public class AcBasic extends AppCompatActivity implements NavigationView.OnNavig
 
         }
 
+
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
