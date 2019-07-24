@@ -16,7 +16,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".AcMain">
+        <activity
+            android:name=".AcMain"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -26,10 +28,12 @@
 
         <activity
             android:name=".AcBasic"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
 
         <activity
             android:name=".AcWrite"
+            android:screenOrientation="landscape"
             android:theme="@style/AppTheme.NoActionBar">
 
         </activity>

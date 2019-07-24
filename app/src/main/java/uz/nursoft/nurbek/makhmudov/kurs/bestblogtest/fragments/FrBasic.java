@@ -20,14 +20,14 @@ public class FrBasic extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fr_basic, container, false);
 
-        findListener(view);
+        find(view);
         setupViewPager(frBasicViewPager);
         frBasicTabLayout.setupWithViewPager(frBasicViewPager);
 
         return view;
     }
 
-    private void findListener(View view) {
+    private void find(View view) {
         frBasicTabLayout  = (TabLayout) view.findViewById(R.id.frBasicTabLayout);
         frBasicViewPager = (ViewPager) view.findViewById(R.id.frBasicViewPager);
     }
