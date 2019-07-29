@@ -5,6 +5,7 @@ import android.net.ConnectivityManager;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AlertDialog;
+import android.widget.Toast;
 
 public class RetMet {
 
@@ -61,5 +62,17 @@ public class RetMet {
         nBuilder.setMessage(sMsgDesc);
         return nBuilder;
     }
+
+    /*************************************************************************************************************
+     * Toast
+     */
+    public void toast(int massageId, int length) {
+        if (length == 1)
+            Toast.makeText(context, context.getResources().getString(massageId), Toast.LENGTH_SHORT).show();
+
+        if (length == 2)
+            Toast.makeText(context, context.getResources().getString(massageId), Toast.LENGTH_LONG).show();
+    }
+
 
 }

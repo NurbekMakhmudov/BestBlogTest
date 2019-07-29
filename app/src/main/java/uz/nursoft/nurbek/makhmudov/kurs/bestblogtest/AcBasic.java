@@ -1,5 +1,6 @@
 package uz.nursoft.nurbek.makhmudov.kurs.bestblogtest;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -16,10 +17,17 @@ import android.view.Menu;
 import android.view.WindowManager;
 import android.widget.Toast;
 
+import uz.nursoft.nurbek.makhmudov.kurs.bestblogtest.app_locale.MyContextWrapperLanguage;
 import uz.nursoft.nurbek.makhmudov.kurs.bestblogtest.fragments.FrBasic;
 import uz.nursoft.nurbek.makhmudov.kurs.bestblogtest.retmet.RetMet;
+import uz.nursoft.nurbek.makhmudov.kurs.bestblogtest.shp.ShP;
 
 public class AcBasic extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(MyContextWrapperLanguage.wrap(newBase, ShP.getInstance(newBase).getLang()));
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

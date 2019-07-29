@@ -24,6 +24,7 @@
 
     <string name="recent">Recent</string>
     <string name="most_liked">Most Liked</string>
-    <string name="share">Share</string>
+
+    <string name="problem_internet">There was a problem with the Internet.</string>
 
 </resources>
