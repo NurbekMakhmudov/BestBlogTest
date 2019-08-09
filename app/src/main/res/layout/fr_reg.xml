@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.FrReg">
+
+    <ScrollView
+        android:id="@+id/frRegScrollView"
+        android:visibility="visible"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="40dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="20dp"
+                    android:text="Registration"
+                    android:textColor="#000000"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_margin="10dp"
+                        android:text="Username"
+                        android:textColor="#000000"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginRight="10dp"
+                            app:srcCompat="@drawable/ic_person_black" />
+
+                        <EditText
+                            android:id="@+id/frRegUserNameEt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:hint="Type your username"
+                            android:inputType="textShortMessage"
+                            android:maxLines="1" />
+
+                    </LinearLayout>
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginTop="5dp"
+                        android:background="#000000"></FrameLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/userNameTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_margin="10dp"
+                        android:text="Password"
+                        android:textColor="#000000"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="10dp"
+                            app:srcCompat="@drawable/ic_lock" />
+
+                        <EditText
+                            android:id="@+id/frRegPassEt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:hint="Type your password"
+                            android:inputType="textPassword"
+                            android:maxLines="1" />
+
+                    </LinearLayout>
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginTop="5dp"
+                        android:background="#000000"></FrameLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_margin="10dp"
+                        android:text="Confirm password"
+                        android:textColor="#000000"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="10dp"
+                            app:srcCompat="@drawable/ic_lock" />
+
+                        <EditText
+                            android:id="@+id/frRegConfirmPassEt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:hint="Confirm your password"
+                            android:inputType="textPassword"
+                            android:maxLines="1" />
+
+                    </LinearLayout>
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginTop="5dp"
+                        android:background="#000000"></FrameLayout>
+
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/frRegSignInBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="50dp"
+                    android:background="@drawable/btn_style"
+                    android:text="SIGN IN"
+                    android:textColor="#ffffff"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="35dp"
+                    android:text="Or Sign Up Using"
+                    android:textColor="#333"
+                    android:textSize="14sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="5dp"
+                        android:src="@drawable/facebook" />
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="5dp"
+                        android:src="@drawable/telegram" />
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="5dp"
+                        android:src="@drawable/google_plus" />
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="5dp"
+                        android:src="@drawable/twitter" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:gravity="bottom|center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Have you account ?"
+                        android:textColor="#333333"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="200dp"
+                        android:text="SIGN IN"
+                        android:textColor="#000000"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/frRegProgressBar"
+        android:indeterminateTint="@color/col_no_blue"
+        android:indeterminate="true"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:layout_width="100dp"
+        android:layout_height="100dp" />
+
+</RelativeLayout>

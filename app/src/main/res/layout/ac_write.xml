@@ -28,6 +28,7 @@
         android:layout_height="match_parent">
 
         <EditText
+            android:id="@+id/acWriteTitleEt"
             android:hint="Title"
             android:background="@null"
             android:textSize="18sp"
@@ -45,6 +46,7 @@
         </FrameLayout>
 
         <EditText
+            android:id="@+id/acWriteDescEt"
             android:hint="Desc"
             android:textColor="#666"
             android:layout_margin="15dp"

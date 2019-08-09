@@ -22,7 +22,8 @@ public class AcMain extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ac_main);
 
-        startBasic();
+        startActivity(new Intent(getApplication(), AcBasic.class));
+        finish();
     }
 
     private void startBasic() {

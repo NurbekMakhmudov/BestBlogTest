@@ -9,13 +9,24 @@ import retrofit.http.POST;
 /**
  * Created by Nurbek Makhmudov on 29.07.2019
  */
-
 public interface ServerApiR1 {
 
     @FormUrlEncoded
     @POST("/test/test.php")
     void test(
-            @Field("pr") String macAddress,
+            @Field("title") String title,
+            @Field("desc") String desc,
+            Callback<Response> responseCallback
+    );
+
+    /*************************************************************************************************************
+     * reg
+     */
+    @FormUrlEncoded
+    @POST("/best-blog/api/registration.php")
+    void registration(
+            @Field("username") String username,
+            @Field("pass") String pass,
             Callback<Response> responseCallback
     );
 

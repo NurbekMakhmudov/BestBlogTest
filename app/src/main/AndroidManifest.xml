@@ -15,7 +15,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AcRead"></activity>
+
         <activity
             android:name=".AcMain"
             android:screenOrientation="portrait">
@@ -32,7 +32,16 @@
         <activity
             android:name=".AcWrite"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".AcAccount"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity android:name=".AcRead"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
     </application>
 
 </manifest>

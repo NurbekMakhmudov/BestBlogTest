@@ -17,6 +17,8 @@ public class ShP {
     private static final String FIRST_TIME_LAUNCH = "FIRST_TIME_LAUNCH";
     private static final String LANG = "LANG";
 
+    private static final String SERVER_REG = "SERVER_REG";
+
     //when fragment no need to back exit application
     private static final String BACK_PRESSED = "BACK_PRESSED";
 
@@ -32,6 +34,18 @@ public class ShP {
         PREF = CONTEXT.getSharedPreferences(SHP, Context.MODE_PRIVATE);
         EDITOR = PREF.edit();
     }
+
+    /*************************************************************************************************************
+     *  REG
+     */
+    public void setServerReg(boolean isReg){
+        EDITOR.putBoolean(SERVER_REG, isReg).commit();
+    }
+
+    public boolean isServerReg(){
+        return PREF.getBoolean(SERVER_REG, false);
+    }
+
 
     /*************************************************************************************************************
      * App Lang
@@ -58,8 +72,8 @@ public class ShP {
     /*************************************************************************************************************
      * when fragment no need to back exit application
      */
-    public void setBackPressed(boolean nBACK_PRESSED) {
-        EDITOR.putBoolean(BACK_PRESSED, nBACK_PRESSED).commit();
+    public void setBackPressed(boolean isBackPressed) {
+        EDITOR.putBoolean(BACK_PRESSED, isBackPressed).commit();
     }
 
     public boolean isBackPressed() {

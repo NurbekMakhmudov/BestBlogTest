@@ -1,9 +1,13 @@
 package uz.nursoft.nurbek.makhmudov.kurs.bestblogtest;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+
 import android.support.design.widget.FloatingActionButton;
+
+import android.support.v7.app.AlertDialog;
 import android.view.View;
 import android.support.v4.view.GravityCompat;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -48,7 +52,13 @@ public class AcBasic extends AppCompatActivity implements NavigationView.OnNavig
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(AcBasic.this, AcWrite.class));
+
+                if (ShP.getInstance(AcBasic.this).isServerReg()) {
+                    startActivity(new Intent(AcBasic.this, AcWrite.class));
+                } else {
+                    startActivity(new Intent(AcBasic.this, AcAccount.class)
+                            .putExtra("appData", "reg"));
+                }
             }
         });
 
@@ -65,13 +75,38 @@ public class AcBasic extends AppCompatActivity implements NavigationView.OnNavig
 
     @Override
     public void onBackPressed() {
+
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
-            super.onBackPressed();
+            if (ShP.getInstance(this).isBackPressed()) {
+                exitApp();
+            } else {
+                //when fragment need to back
+                int count = getSupportFragmentManager().getBackStackEntryCount();
+                if (count == 0) {
+                    exitApp();
+                } else {
+                    getSupportFragmentManager().popBackStack();
+                }
+            }
         }
     }
+
+    private void exitApp() {
+        new AlertDialog.Builder(this)
+                .setMessage(getResources().getString(R.string.exit_the_program))
+                .setCancelable(true)
+                .setPositiveButton(getResources().getString(R.string.yes), new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        finish();
+                    }
+                })
+                .setNegativeButton(getResources().getString(R.string.no), null)
+                .show();
+    }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -88,7 +123,15 @@ public class AcBasic extends AppCompatActivity implements NavigationView.OnNavig
             Toast.makeText(this, "search", Toast.LENGTH_SHORT).show();
 
         } else if (id == R.id.action_account) {
-            Toast.makeText(this, "account", Toast.LENGTH_SHORT).show();
+
+            if (ShP.getInstance(this).isServerReg()) {
+                startActivity(new Intent(this, AcAccount.class)
+                        .putExtra("appData", "profile"));
+            } else {
+                startActivity(new Intent(this, AcAccount.class)
+                        .putExtra("appData", "reg"));
+            }
+
 
         } else if (id == R.id.action_share) {
             Toast.makeText(this, "share", Toast.LENGTH_SHORT).show();
@@ -131,7 +174,7 @@ public class AcBasic extends AppCompatActivity implements NavigationView.OnNavig
         return true;
     }
 
-    private void frDefault(){
+    private void frDefault() {
         RetMet.getInstance(this)
                 .replaceFragment(getSupportFragmentManager(), new FrBasic(), R.id.acBasicContentConsL);
     }

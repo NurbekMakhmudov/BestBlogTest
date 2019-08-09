@@ -6,4 +6,9 @@
     <color name="col_white">#ffffff</color>
     <color name="col_no_black">#333</color>
     <color name="col_no_no_black">#666</color>
+
+    <color name="col_black">#000000</color>
+    <color name="col_no_blue">#03A9F4</color>
+    <color name="col_red">#FF0000</color>
+
 </resources>

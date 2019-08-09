@@ -11,7 +11,7 @@ public class ServerConnectionServiceR1 {
 
     private static ServerConnectionServiceR1 instance;
 
-    private static final String BASE_URL = "https://test.uz/";
+    private static final String BASE_URL = "http://nurbek.zzz.com.ua/";
 
     private RestAdapter restAdapter;
 
