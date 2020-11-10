@@ -1,3 +1,3 @@
-# BestBlogTest
+# Best Blog Test
 
-Creating Android Apps 
+Android App for mini-blogging  
